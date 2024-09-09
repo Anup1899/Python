@@ -8,8 +8,34 @@ dinner = random.choice(food)
 
 # Dictionary in python
 # Used to store key value pairs
-dict = {'name': "Anup", 'color': choices}
+dict = {'name': "Anup", 'color': "red", 'food': dinner}
 
+
+# If Operator and Comparision in python
+age = 15
+if age > 19:  # ==, !=, <=, >=, <, >
+    print("You are an adult")
+elif age >12:
+    print("You are an Teen")
+elif age >1:
+    print("You are a child")
+else:
+    print("You are a baby")
+
+
+
+
+# String in python
+fname="Anup"
+lname="Alone"
+print("Concantination:-- " "Hello my name is " + fname + " " + lname)
+
+print(f"FString:--  Hello my name is {fname} {lname}")
+
+print(f"""Multiple Line of String :--
+Adding Multiple Line for FString
+Hello my name is {fname} {lname}
+""")
 
 # Function in python
 # Indentation is very important in python
@@ -22,11 +48,32 @@ def get_choices():
     return choices
 
 def check_win(player, computer):
-    
+    player = player.lower()
+    computer = computer.lower()
+    print(f"You choose '{player}', computer choose '{computer}'")
+
+    if(player == computer):
+        return print("Its a Tie")
+    elif(player == "rock"):
+        if(computer == "scissors"):
+            return print("Player Won")
+        else:
+            return print("Computer Won")
+    elif(player == "paper"):
+        if(computer == "rock"):
+            return print("Player Won")
+        else: 
+            return print("Computer Won")
+    else:
+        if(computer == "paper"):
+            return print("Player Won")
+        else:
+            return print("Computer Won")
 
 
 choices = get_choices()
-print(choices)
+checkWin = check_win(choices['player'], choices['computer'])
+
 
 
 

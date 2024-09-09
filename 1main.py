@@ -23,8 +23,6 @@ else:
     print("You are a baby")
 
 
-
-
 # String in python
 fname="Anup"
 lname="Alone"
@@ -36,6 +34,20 @@ print(f"""Multiple Line of String :--
 Adding Multiple Line for FString
 Hello my name is {fname} {lname}
 """)
+
+# Type of Operataor
+print("CHECKING DATATYPE IN PYTHON")
+name = "Anup"
+print(type(name))
+print(type(name) == str)
+
+# Check for Instance
+print("CHECKING INSTNACE IN PYTHON")
+print(isinstance(name, str))
+
+# Transforming One Data Type to Another
+age = int("20")
+num = float(2)
 
 # Function in python
 # Indentation is very important in python

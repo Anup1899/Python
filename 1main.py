@@ -38,8 +38,13 @@ Hello my name is {fname} {lname}
 # Type of Operataor
 print("CHECKING DATATYPE IN PYTHON")
 name = "Anup"
-print(type(name))
+print("String datatype :", type(name))
 print(type(name) == str)
+age= 25
+print("Number Datatype :", type(age))
+weight = 75.5
+print("Float Datatype :", type(weight))
+
 
 # Check for Instance
 print("CHECKING INSTNACE IN PYTHON")

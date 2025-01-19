@@ -15,7 +15,7 @@
 #   1 - 1 = 0
 #   2 * 2 = 4
 #   1 / 1 = 1
-#   2 ** 2 = 16
+#   2 ** 2 = 4
 #   4 % 3 = 1
 #   4 // 3 = 1
 #  7 \\ 2 = 3 --> Provides Floor Value and Round it off the nearest integer
@@ -23,7 +23,7 @@
 
 # Boolean Operator
 
-# not
+# not 
 # and
 # or
 
@@ -58,7 +58,7 @@
     # It is used to check if a sequence is present in the object
 
 # Tirnary Operator in Python
-    # true_value if condition else false_value
+    # true_value if condition el se false_value
 
 def is_adult(age):
     return True if age > 18 else False
@@ -73,3 +73,18 @@ print("haRRy potter".upper()) # Uppercase the whole string
 print("haRRy potter".title()) # Capitalize the first letter of each word
 print("haRRy".islower()) # Checks for all the letters to be in lower case
 print(len("harry"))
+print("har" in "harry")
+print("harry potter"[2:4]) # Slicing the string --> Starting from 2nd index to before 4th index
+print("harry potter"[2:]) # Slicing the string --> Starting from 2nd index to the end of the string
+
+
+# Lists, Tuples and Dictionaries in Python are FALSE only when it is empty
+
+
+
+# any, all in python
+print("any and all in Python")
+a1 = True
+a2 = False
+print( ([a1, a2]))
+print(all([a1, a2]))

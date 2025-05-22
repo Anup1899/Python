@@ -184,9 +184,46 @@ print("---------------------------------------Function--------------------------
 
 
 
-# Function : End   ------------------------------------------------------------------------
+# File Input/Output : Start   ------------------------------------------------------------------------
+print("---------------------------------------File Input/Output---------------------------------------")
+# Text File :- .txt, .docx, .log, etc,
+# Binary File :- .mp4, .mov, .png, .jpeg, etc,
+# IMPORTANT :- 
+    # Concept of Stream/ Curor
+    # Everytime the file is read the cursor is pointed at the beginning end remains at the end of the end.
+    # While appending to the file the stream/cursor is appened at the end of the file 
+print("Reading a file")
+file =  open("demo.txt", "r")
+data = file.read()
+print(data)
+file.close()
 
-# Function : Start   ------------------------------------------------------------------------
+print("Writing a file") # Truncate the data of the file
+file = open("demo.txt", "w")
+data = file.write("This is overwite the data in the file.")
+file.close()
+
+print("Append the data")
+file = open("demo.txt", "a")
+data = file.write("\nThis statement has appended")
+file.close()
+
+# r+ -> read and overwrite the data in the file. Stream starts where it was already before
+# w+ -> read and overwrite the data in the file. Truncate the data of the file
+# a+ -> read and append the data in the file. Stream starts from the end of the file
+
+print("--------------------------------With Statement File Input/Output---------------------------------------")
+with open("demo.txt", "r") as f:
+    data = f.read()
+    print(data)
+    # No need to close the file while using with statement
+
+
+# For deleting the file  
+# import os 
+# os.remove("demo.txt")
+
+# File Input/Output : End   ------------------------------------------------------------------------
 
 
 

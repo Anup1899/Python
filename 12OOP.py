@@ -215,4 +215,68 @@ print(stud.perentage) # 98% --> WRONG:- Value is not recalculated
 print("Property", stud.calculatePercentage) # 98%
 
 
+print("----------------------------------Polymorphism-------------------------------------")
+# Poly means many
+# Morph means form
+# Operation Overloading ----> Same operator is allowed to have different meaning according to the cotext
+    # 1+3 -> + behaves like adding of arithmatic operation
+    # "Anup" + "Alone" -> + behaves like Concating String
+    # [1,2,3] + [4,5,6] -> + behaves like merging
 
+# Dunder Function --> Function with double underscroper (Ex:- __add__, __sub__)
+print("--------Dunder Function---------")
+
+class Complex:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+
+    def showNumber(self):
+        print(str(self.real) + " + " + str(self.imag) + "j")
+
+    def add(self, num):
+        newReal = self.real + num.real
+        newImag = self.imag + num.imag
+        return Complex(newReal, newImag)
+    # ----------------------------------------------Dunder Function-------------------------------------------------------------------------
+    def __add__(self, num):
+        newReal = self.real + num.real
+        newImag = self.imag + num.imag
+        print(str(newReal) + " + " + str(newImag) + "j")
+        return Complex(newReal, newImag)
+    
+
+
+
+
+num1 = Complex(1, 3)
+num1.showNumber()
+
+num2 = Complex(2, 4)
+num2.showNumber()
+
+
+num3 = num1.add(num2)
+num3.showNumber()
+
+# num1 + num2 --> Error 
+# We define DUNDER FUNCTION for it
+num4 = num1 + num2
+print(num4)
+
+
+# DUNDER FUNCTION
+class Order:
+    def __init__(self, item, price):
+        self.item = item
+        self.price = price
+
+    def __gt__(self, order2):
+        return self.price > order2.price
+        
+
+
+order1 = Order("Chips", 20)
+order2 = Order("Tea", 15)
+
+print(order1 > order2)

@@ -5,7 +5,7 @@ for item in items:
 	print(item) # 1 2 3 4
 
 for item in range(15):
-	print(item) # 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+	print(item) # 1 2 3 4 5 6 7 8 9 10 11 12 13 14
 
 # To get the index and item
 for index, item in enumerate(items):
